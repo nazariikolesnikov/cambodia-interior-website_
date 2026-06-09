@@ -1,15 +1,15 @@
-import dartSass from "sass";
+import * as dartSass from 'sass';
 import gulpSass from "gulp-sass";
 import rename from "gulp-rename";
-import clearCss from "gulp-clean-css";
+import cleanCss from "gulp-clean-css";
 import webpcss from "gulp-webpcss";
 import autoprefixer from "gulp-autoprefixer";
-import groupCssMediaQueries from "gupl-group-css-media-queries";
+import groupCssMediaQueries from "gulp-group-css-media-queries";
 
 const sass = gulpSass(dartSass);
 
 export const scss = () => {
-    return app.gulp.src(app.path.src.scss, { sourcemaps: true })
+    return app.gulp.src(app.path.src.scss, { sourcemaps: true, allowEmpty: true })
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: "SCSS",
@@ -32,9 +32,11 @@ export const scss = () => {
             overrideBrowserlist: ["last 3 versions"],
             cascade: true,
         }))
+        .pipe(app.gulp.dest(app.path.build.scss))
+        .pipe(cleanCss())
         .pipe(rename({
             extname: ".min.css",
         }))
-        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.gulp.dest(app.path.build.scss))
         .pipe(app.plugins.browsersync.stream());
 }
