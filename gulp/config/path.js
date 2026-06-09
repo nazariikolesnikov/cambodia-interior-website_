@@ -11,8 +11,8 @@ export const path = {
         files: `${buildFolder}/files/`,
     },
     src: {
-        scss: `${srcFolder}/scss/style.scss`,
-        html: `${srcFolder}/*.html`, //.pug
+        scss: `${srcFolder}/files/scss/*.scss`,
+        html: `${srcFolder}/files/html/*.html`, //.pug
         files: `${srcFolder}/files/**/*.*`, 
     },
     watch: {

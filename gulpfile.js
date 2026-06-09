@@ -23,3 +23,5 @@ const mainTasks = gulp.parallel(copy, html, scss);
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 
 gulp.task('default', dev);
+
+
