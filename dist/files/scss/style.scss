@@ -249,18 +249,6 @@ body {
   z-index: 1;
 }
 
-.hero-main {
-  position: relative;
-  z-index: 3;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to right, $color-overlay-start 0%, rgba(0, 0, 0, 0.6) 100%), 
-    url('./../../assets/images/heroBanner/heroBannerImage.png') center/cover no-repeat;
-}
-
 .title-container {
   position: relative;
   display: flex;
@@ -474,14 +462,13 @@ body {
   width: 25%;
   min-width: 300px;
   max-width: 380px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%), 
-    url('../assets/images/hero-banner/heroBannerImage.png') center/cover no-repeat;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 48px;
   backdrop-filter: blur(4px);
+  background: url('https://i.ibb.co/fdxT0D8C/hero-Banner-Image.png') !important;
 
   @media (max-width: 992px) {
     display: none;
@@ -666,6 +653,16 @@ body {
 .about-us-first-image {
   object-fit: cover;
   object-position: center;
+  width: auto;
+  height: 640px !important;
+}
+
+.about-us-second-image {
+  object-fit: cover;
+  object-position: center;
+  width: 800px !important;
+  height: auto;
+  margin-top: -50px;
 }
 
 .right-content {
@@ -725,7 +722,7 @@ body {
 .divider-wrapper {
   display: flex;
   align-items: center;
-  max-width: 700px;
+  max-width: 620px;
   gap: 20px;
   margin: 40px 0;
 }
@@ -850,26 +847,6 @@ body {
   }
 }
 
-.hero-sidebar {
-  position: relative;
-  z-index: 2;
-  width: 25%;
-  min-width: 300px;
-  max-width: 380px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%), 
-    url('../assets/images/hero-banner/heroBannerImage.png') center/cover no-repeat;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 48px;
-  backdrop-filter: blur(4px);
-
-  @media (max-width: 992px) {
-    display: none;
-  }
-}
-
 .main-header {
   @media (max-width: 992px) {
     padding: 16px 24px;
@@ -981,10 +958,9 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  background: url('https://i.ibb.co/fdxT0D8C/hero-Banner-Image.png') !important;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%), 
-    url('../assets/images/hero-banner/heroBannerImage.png') center/cover no-repeat;
 }
 
 .lang-line {
@@ -997,6 +973,8 @@ body {
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 2px;
+  background: transparent !important;
+  color: #f0eeee !important;
 
   &:hover {
     cursor: pointer;
